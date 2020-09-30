@@ -18,7 +18,7 @@ public class TesteConexao4 {
 		ResultSet resultado = null;
 		
 		try {
-			fiap = DriverManager.getConnection("jdbc:oracle:thin:@oracle.fiap.com.br:1521:ORCL","rm85931","201201");
+			fiap = DriverManager.getConnection("");
 			estrutura = fiap.prepareStatement("SELECT * FROM tb_cliente where num_id =? and nm_usuario=?");
 			
 			String nome = JOptionPane.showInputDialog("Digite o nome");
@@ -28,10 +28,10 @@ public class TesteConexao4 {
 			resultado = estrutura.executeQuery(); 
 			
 			if (resultado.next()) {
-				System.out.println(nome + ", você está autorizado!");
+				System.out.println(nome + ", vocÃª estÃ¡ autorizado!");
 				
 			} else {
-				System.out.println(nome + ", seus dados não conferem!");				
+				System.out.println(nome + ", seus dados nÃ£o conferem!");				
 			}
 			
 			
