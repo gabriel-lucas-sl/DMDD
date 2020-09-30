@@ -16,7 +16,7 @@ public class TesteConexao {
 		ResultSet resultado = null;
 		
 		try {
-			fiap = DriverManager.getConnection("jdbc:oracle:thin:@oracle.fiap.com.br:1521:ORCL","rm85931","201201");
+			fiap = DriverManager.getConnection("");
 			estrutura = fiap.createStatement();
 			resultado = estrutura.executeQuery("select * from tb_cliente");
 			
