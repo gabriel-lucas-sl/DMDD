@@ -18,7 +18,7 @@ public class TesteConexao2 {
 		ResultSet resultado = null;
 		
 		try {
-			fiap = DriverManager.getConnection("jdbc:oracle:thin:@oracle.fiap.com.br:1521:ORCL","rm85931","201201");
+			fiap = DriverManager.getConnection();
 			estrutura = fiap.createStatement();
 			
 			String nome = JOptionPane.showInputDialog("Digite o nome");
