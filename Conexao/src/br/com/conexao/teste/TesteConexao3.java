@@ -18,7 +18,7 @@ public class TesteConexao3 {
 		ResultSet resultado = null;
 		
 		try {
-			fiap = DriverManager.getConnection("jdbc:oracle:thin:@oracle.fiap.com.br:1521:ORCL","rm85931","201201");
+			fiap = DriverManager.getConnection("");
 			estrutura = fiap.createStatement();
 			
 			String nome = JOptionPane.showInputDialog("Digite o nome");
@@ -27,17 +27,17 @@ public class TesteConexao3 {
 			resultado = estrutura.executeQuery
 					("select * from tb_cliente where num_id = " + id + " and nm_usuario = '" + nome + "'"); 
 			
-			// Concatenação traz falhas de segurança 
+			// ConcatenaÃ§Ã£o traz falhas de seguranÃ§a 
 			// SQL INJECTION	
 			// ZE'OR'1'='1
 			// 666
 			
 			
 			if (resultado.next()) {
-				System.out.println(nome + ", você está autorizado!");
+				System.out.println(nome + ", vocÃª estÃ¡ autorizado!");
 				
 			} else {
-				System.out.println(nome + ", seus dados não conferem!");				
+				System.out.println(nome + ", seus dados nÃ£o conferem!");				
 			}
 			
 			
